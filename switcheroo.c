@@ -15,14 +15,16 @@ int main() {
     for(i = 0; i < 10; i++) printf("%d\n", arr[i]);
 
     int sec_arr[10];
+    int *p1 = arr;
+    int *p2 = sec_arr;
 
     for(i = 0; i < 10; i++) {
-        *(sec_arr + i) = *(9 - i + arr);
+        *(p2 + i) = *(9 - i + p1);
     }
 
     printf("\nSecond array:\n");
     for(i = 0; i < 10; i++) {
-        printf("%d\n", *(sec_arr + i));
+        printf("%d\n", *(p2 + i));
     }
 
 }
