@@ -21,6 +21,8 @@ int main() {
     }
 
     printf("\nSecond array:\n");
-    for(i = 0; i < 10; i++) printf("%d\n", sec_arr[i]);
+    for(i = 0; i < 10; i++) {
+        printf("%d\n", *(sec_arr + i));
+    }
 
 }
